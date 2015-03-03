@@ -11,8 +11,16 @@ package packag;
 ****************************************************************************************************************
 */
 
-
-public class Main 
+public class GridMain 
 {
+	public static void main(String[] args)
+	{
+	//create create 2 dimensional grid long[][] example
+	
+	
 
+	//Create a "FindGridProduct" object and call "findlargestproduct(example,4)" method
+		//print answer
+		
+	}
 }

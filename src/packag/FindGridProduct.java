@@ -14,5 +14,84 @@ package packag;
 
 public class FindGridProduct 
 {
+	long findlargestproductdiagonally(long[][] nums, int set)
+	{
+		long tempproduct;
+		long largestproduct = 0;
+		int length = nums.length;
+		int width = nums[0].length;
+		//diagonally from left to right
+		for(int l = width-set; l>=0;l--)
+		{
+			//System.out.println(l);
+			
+				
+				int count = 0;
+				for(int j=l; count<=length-set; count++)
+				{
+					
+					//int place = 0;
+					tempproduct = 1;
+					for(int k = 0; k<set; k++)
+					{
+						tempproduct = tempproduct * nums[j+k][k+count];
+						//System.out.println(nums[j+k][k+count]);//for testing
+						//System.out.println(temp);
+					}
+					//if (tempproduct > 1) System.out.println(tempproduct);//for testing
+					if (tempproduct > largestproduct) 
+					{
+						largestproduct = tempproduct;
+						//Next 2 lines are for testing purposes the current answer for the largest product of 13 consecutive numbers in the series 
+						//then print out where the first number is that got you that product
+						//System.out.println(largestproduct);
+						//System.out.println(i);
+					}
+					//place++;
+					
+				}
+				
 
+				
+		
+		}
+		for(int w = width-1; w >= set-1; w--)
+		{
+			//System.out.println(l);
+			
+				
+				int count = 0;
+				for(int j=w; count <= length-set; count++)
+				{
+					
+					int place = 0;
+					tempproduct = 1;
+					for(int k = 0; k <set; k++)
+					{
+						tempproduct = tempproduct * nums[j-k][k+count];
+						//System.out.println(nums[j-k][k+count]);//for testing
+						//System.out.println(temp);
+						place++;
+					}
+					//if (tempproduct > 1) System.out.println(tempproduct);//for testing
+					if (tempproduct > largestproduct) 
+					{
+						largestproduct = tempproduct;
+						//Next 2 lines are for testing purposes the current answer for the largest product of 13 consecutive numbers in the series 
+						//then print out where the first number is that got you that product
+						//System.out.println(largestproduct);
+						//System.out.println(i);
+					}
+					
+					
+				}
+				
+
+				
+		
+		}
+		
+		return largestproduct;
+		
+	}
 }
