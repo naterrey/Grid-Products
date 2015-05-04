@@ -11,6 +11,7 @@ package packag;
 ****************************************************************************************************************
 */
 
+//I have no clue which Project Euler problem this is. 
 
 public class FindGridProduct 
 {
